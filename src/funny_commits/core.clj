@@ -13,7 +13,7 @@
   (-> (request "https://api.github.com/rate_limit") :body :resources :core :remaining)
   )
 
-(def funny-words #"(?i).*(fuck|shit|nazi|cunt|pussy|slayer|damn|holy).*")
+(def funny-words #"(?i).*(fuck|shit|nazi|cunt|pussy|slayer|damn|holy|crap).*")
 (defn funny? [message]
   (do
     (not (empty? (re-matches funny-words message)))))
